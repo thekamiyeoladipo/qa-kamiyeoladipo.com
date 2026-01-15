@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamiye Oladipo Ojedokun - FrontEnd Developer</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta name="description" content="Learn more about Kamiye Oladipo Ojedokun, a self-taught FrontEnd Engineer with a passion for user-centric digital experiences.">
+  <meta property="og:title" content="About Kamiye Oladipo Ojedokun">
+  <meta property="og:description" content="Learn more about Kamiye Oladipo Ojedokun, a self-taught FrontEnd Engineer with a passion for user-centric digital experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kamiyeoladipo.com/about.html">
+  <meta property="og:image" content="https://kamiyeoladipo.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Kamiye Oladipo Ojedokun">
+  <meta name="twitter:description" content="Learn more about Kamiye Oladipo Ojedokun, a self-taught FrontEnd Engineer with a passion for user-centric digital experiences.">
+  <meta name="twitter:image" content="https://kamiyeoladipo.com/images/og-image.jpg">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0N0Y7L8VW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T0N0Y7L8VW');
+</script>
+</head>
+
+<body data-barba="wrapper" class="bg-black">
+
+    <!-- Back to top button -->
+     <button id="backToTop"
+    class="opacity-0 font-extrabold fixed bottom-6 right-6 p-3  
+    bg-[orangered] text-white text-sm shadow-lg 
+    hover:text-black pointer-events-none z-50
+    hover:scale-110 transform transition-transform duration-300"
+    aria-label="Back to Top">
+    ↑
+  </button>
+
+  <!-- Navbar -->
+  <nav id="nav" class="bg-black fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/thekamiyeoladipo" target="_blank" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+          </svg>
+        </a>
+      
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/kamiyeoladipo/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+          </svg>
+        </a>
+      </div>
+
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="relative group overflow-hidden">home.
+          <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+          </span>
+        </a>
+        <a href="projects.html" class="relative group overflow-hidden">projects. <span
+            class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+          </span>
+        </a>
+        <a href="about.html" class="active relative group overflow-hidden">about me. <span
+            class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+          </span>
+        </a>
+        <a href="contact.html" class="relative group overflow-hidden">contact me. <span
+            class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+          </span>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <button id="menuToggle" class="pt-2 md:hidden focus:outline-none z-50">
+        <p id="hamburger">menu</p>
+        <p id="close" class="hidden h-8 w-8">close</p>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="overflow-y-auto fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 transform -translate-y-full transition-transform duration-500">
+      <a href="index.html" class="text-2xl menu-item relative group overflow-hidden">home.
+        <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+        </span>
+      </a>
+      <a href="projects.html" class="text-2xl menu-item relative group overflow-hidden">projects.
+        <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+        </span>
+      </a>
+      <a href="about.html" class="text-2xl menu-item relative group overflow-hidden">about me.
+        <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+        </span>
+      </a>
+      <a href="contact.html" class="text-2xl menu-item relative group overflow-hidden">contact me.
+        <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+        </span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!--Start of main content-->
+  <main data-barba="container" data-barba-namespace="home">
+
+    <section id="hero" class="min-h-screen pt-28 pb-10 md:pt-32 md:pb-20 flex items-center bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+        <!-- Left Image Column -->
+        <div class="md:w-1/2 w-full flex justify-center">
+          <img src="images/about.webp" alt="A picture of me"
+            class="rounded-2xl w-64 md:w-80 object-cover wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.3s" />
+        </div>
+
+        <!-- Right Text Column -->
+        <div class="md:w-1/2 w-full text-left space-y-6">
+          <h1 class="about text-2xl md:text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+            
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            I'm Kamiye Oladipo Ojedokun, a self-taught Front-end Engineer with some experience in User Interface design.
+          </p>
+          <p class="text-lg md:text-xl text-gray-300 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            While my academic background is in sociology, I've developed a deep fascination with how technology shapes
+            human
+            interaction. Through self-directed learning, I've applied my analytical skills to computer science and web
+            development, discovering how to build efficient, user-centric digital experiences.
+          </p>
+
+          <p class="text-lg md:text-xl text-gray-300 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            With an emphasis on quality, accessibility, and quick user experiences, I've created products for
+            businesses, offering
+            solutions on small company websites.
+          </p>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section id="hero" class="bg-black py-20">
+      <div class="max-w-6xl mx-auto px-6">
+    
+        <p class="text-lg md:text-xl text-gray-300">
+          Every line of code I write isn't just about functionality—it's about delivering meaningful experiences.
+          Whether I'm crafting smooth interactions, scaling responsive designs, or optimizing performance, I'm always
+          chasing that sweet spot between aesthetic and efficiency.
+          <br><br>
+          My work is rooted in curiosity, discipline, and a deep respect for the user. This isn't just development—it's
+          digital craftsmanship.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-black py-12 md:py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Image 1 -->
+          <div class="aspect-square overflow-hidden rounded-lg wow animate__animated animate__fadeIn"
+            data-wow-delay="0.1s">
+            <img src="images/about2.webp" alt="Description 1"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <!-- Image 2 -->
+          <div class="aspect-square overflow-hidden rounded-lg wow animate__animated animate__fadeIn"
+            data-wow-delay="0.2s">
+            <img src="images/about3.webp" alt="Description 2"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <!-- Image 3 -->
+          <div class="aspect-square overflow-hidden rounded-lg wow animate__animated animate__fadeIn"
+            data-wow-delay="0.3s">
+            <img src="images/about4.webp" alt="Description 3"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <!-- Image 4 -->
+          <div class="aspect-square overflow-hidden rounded-lg wow animate__animated animate__fadeIn"
+            data-wow-delay="0.4s">
+            <img src="images/about5.webp" alt="Description 4"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+
+
+  </main> <!-- End of Main Content -->
+
+
+  <!--Footer-->
+  <footer class="bg-black text-white px-6 py-20 font-mono relative">
+    <!-- CTA Text -->
+    <div class="text-center mb-8 wow fadeInUp" data-wow-delay="0.1s">
+      <p class="text-gray-400 text-lg">Got an interesting project?</p>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mb-12 wow fadeInUp" data-wow-delay="0.2s"></div>
+
+    <div class="max-w-6xl mx-auto grid gap-12 text-center md:grid-cols-3 md:text-left">
+      <!-- Connect with me -->
+      <div class="wow fadeInUp" data-wow-delay="0.3s">
+        <p class="text-sm text-gray-500 uppercase mb-2">connect with me</p>
+        <p class="text-sm text-gray-300 uppercase mb-2">i'd love to hear from you</p>
+      </div>
+
+      <!-- Follow me -->
+      <div class="wow fadeInUp" data-wow-delay="0.4s">
+        <p class="text-sm text-gray-500 uppercase mb-2">follow me</p>
+        <div class="flex justify-center md:justify-center space-x-4 text-xl">
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/thekamiyeoladipo/" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/kamiyeoladipo/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="https://x.com/kamiyeoladiipo" target="_blank" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/thekamiyeoladipo" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+            </svg>
+          </a>
+
+
+        </div>
+      </div>
+
+      <!-- Say hello -->
+      <div class="wow fadeInUp" data-wow-delay="0.5s">
+        <p class="text-sm text-gray-500 uppercase mb-2">shoot me a mail</p>
+        <p class="text-gray-300 break-all text-base">kamiye31@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GSAP Core -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="js/ScrambleTextPlugin.min.js"></script>
+  <!-- unpkg -->
+  <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- jsdelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script>
+    barba.init({
+      // ...
+    })
+  </script>
+  <script>
+    // This event runs even on browser "back"
+    window.onpageshow = function () {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburger');
+      const close = document.getElementById('close');
+
+      // Reset menu state on page load or back navigation
+      if (menu.classList.contains('menu-open')) {
+        menu.classList.remove('menu-open');
+        menu.classList.add('-translate-y-full');
+      }
+
+      // Reset icons
+      hamburger.classList.remove('hidden');
+      close.classList.add('hidden');
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
