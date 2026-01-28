@@ -269,99 +269,250 @@
       </div>
     </section>
 
+    <!-- Section divider -->
+<div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
 
-    <!-- Test Coverage (insert under overview paragraph) -->
+
+
+    <!-- Test Coverage -->
+    <div class="mt-16 sm:mt-20 lg:mt-24">
+      <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+        data-wow-duration="0.9s" data-wow-delay="0.12s">
+        test coverage.
+      </h2>
+    
+      <!-- 2-column layout (spans container width, respects paddings) -->
+      <div class="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <!-- Column 1: Execution summary -->
+        <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.18s">
+          <p class="text-mono  text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+            <span class="text-white">Total Test Cases Executed:</span> 37
+          </p>
+    
+          <ul class="mt-8 space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                <span class="text-white">Passed:</span> 32
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                <span class="text-white">Failed:</span> 3
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                <span class="text-white">Blocked / Skipped:</span> 2
+              </p>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Column 2: Tested flows -->
+        <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.24s">
+          <p class="font-mono text-lg text-white tracking-[0.12em] leading-none">
+    
+            Tested flows :
+          </p>
+    
+          <ul class="mt-8 space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Authentication / User Registration
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Product Search &amp; Discovery
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Product Details Page (PDP)
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Shopping Cart
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Checkout
+              </p>
+            </li>
+    
+            <li class="flex items-start gap-4">
+              <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+              <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                Cross-Platform Testing: Desktop &amp; Mobile Web
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section divider -->
+<div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
+
+
+    <!-- Key Defects & Observations -->
 <div class="mt-16 sm:mt-20 lg:mt-24">
   <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
     data-wow-duration="0.9s" data-wow-delay="0.12s">
-    test coverage.
+    key defects &amp; observations.
   </h2>
 
-  <!-- 2-column layout (spans container width, respects paddings) -->
-  <div class="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-    <!-- Column 1: Execution summary -->
-    <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.18s">
-      <p class="text-mono  text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-        <span class="text-white">Total Test Cases Executed:</span> 37
-      </p>
+  <!-- TABLE (desktop) + scroll on small screens -->
+  <div class="wow animate__animated animate__fadeInUp mt-10" data-wow-duration="0.9s" data-wow-delay="0.18s">
 
-      <ul class="mt-8 space-y-6">
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            <span class="text-white">Passed:</span> 32
-          </p>
-        </li>
+    <div class="w-full overflow-x-auto">
+      <table class="w-full min-w-[820px] border-separate border-spacing-y-4">
+        <thead>
+          <tr>
+            <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Defect / Observation</th>
+            <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Type</th>
+            <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Severity</th>
+            <th class="text-left text-sm text-white/60 font-normal pb-2">Description</th>
+          </tr>
+        </thead>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            <span class="text-white">Failed:</span> 3
-          </p>
-        </li>
+        <tbody>
+          <!-- Row 1 -->
+          <tr class="align-top">
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-text-/55">
+                OTP not delivered during new user registration
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Functional
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Critical
+              </p>
+            </td>
+            <td>
+              <p class="text-lg md:text-xl white leading-8 tracking-[0.06em] text-white/55">
+                Prevents new users from creating accounts; no error message or fallback
+              </p>
+            </td>
+          </tr>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            <span class="text-white">Blocked / Skipped:</span> 2
-          </p>
-        </li>
-      </ul>
+          <!-- Row 2 -->
+          <tr class="align-top">
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Invalid email format accepted during registration
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Validation
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                High
+              </p>
+            </td>
+            <td>
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Allows incorrect user data; affects authentication &amp; communication
+              </p>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr class="align-top">
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Search results return unrelated products
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Functional / UX
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Medium
+              </p>
+            </td>
+            <td>
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Reduces search accuracy and product discoverability
+              </p>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr class="align-top">
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Checkout session remains active during inactivity
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Observation / UX
+              </p>
+            </td>
+            <td class="pr-8">
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Low
+              </p>
+            </td>
+            <td>
+              <p class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                Potential risk for user confusion or session misuse
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Column 2: Tested flows -->
-    <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.24s">
-     <p class="font-mono text-lg text-white tracking-[0.12em] leading-none">
-          
-      Tested flows :
-        </p>
 
-      <ul class="mt-8 space-y-6">
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Authentication / User Registration
-          </p>
-        </li>
-
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Product Search &amp; Discovery
-          </p>
-        </li>
-
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Product Details Page (PDP)
-          </p>
-        </li>
-
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Shopping Cart
-          </p>
-        </li>
-
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Checkout
-          </p>
-        </li>
-
-        <li class="flex items-start gap-4">
-          <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
-          <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-            Cross-Platform Testing: Desktop &amp; Mobile Web
-          </p>
-        </li>
-      </ul>
+    <!-- Optional: placeholder area for Jira screenshots (full width, consistent spacing) -->
+    <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Replace these with your images -->
+      <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+        <img src="images/screenshots/Screenshot 1.png" alt="">
+      </div>
+      <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+        <img src="images/screenshots/Screenshot 2.png" alt="">
+      </div>
+      <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+        <img src="images/screenshots/Screenshot 3.png" alt="">
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Section divider -->
+<div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
+
+
 
 
  
