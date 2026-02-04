@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumia Manual Testing Case Study | Kamiye Oladipo Ojedokun</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta name="description"
+        content="Comprehensive manual testing case study of Jumia e-commerce platform. Detailed test execution, bug reports, and quality assurance insights by Kamiye Oladipo Ojedokun.">
+    <meta property="og:title" content="Jumia Manual Testing Case Study | Kamiye Oladipo">
+    <meta property="og:description"
+        content="In-depth case study showcasing manual testing of Jumia's e-commerce platform. Includes test scenarios, execution summary, bug reports, and quality recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kamiyeoladipo.com/casestudy-jumia.html">
+    <meta property="og:image" content="https://kamiyeoladipo.com/images/jumia-case-study-og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jumia Manual Testing Case Study">
+    <meta name="twitter:description"
+        content="Comprehensive manual testing case study of Jumia e-commerce platform with detailed test execution, bug reports, and QA insights.">
+    <meta name="twitter:image" content="https://kamiyeoladipo.com/images/jumia-case-study-og.jpg">
+    <!--Microsoft Clarity-->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "s1q20f2h5c");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0N0Y7L8VW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T0N0Y7L8VW');
+    </script>
+</head>
+
+<body data-barba="wrapper" class="bg-black">
+
+    <!--Preloader-->
+
+
+
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="opacity-0 font-extrabold fixed bottom-6 right-6 p-3  
+    bg-[orangered] text-white text-sm shadow-lg 
+    hover:text-black pointer-events-none z-50
+    hover:scale-110 transform transition-transform duration-300" aria-label="Back to Top">
+        ↑
+    </button>
+
+
+    <!-- Navbar -->
+    <nav id="nav" class="bg-black fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!--  Logos on the left -->
+            <!-- GitHub -->
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/thekamiyeoladipo" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/kamiye-oladipo/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </a>
+            </div>
+
+
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="active relative group overflow-hidden">home.
+                    <span
+                        class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                    </span>
+                </a>
+                <a href="projects.html" class="relative group overflow-hidden">projects.<span
+                        class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                    </span>
+                </a>
+                <a href="about.html" class="relative group overflow-hidden">about me.<span
+                        class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                    </span>
+                </a>
+                <a href="contact.html" class="relative group overflow-hidden">contact me.<span
+                        class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                    </span>
+                </a>
+                <a href="resume/Kamiye-Oladipo-Resume.pdf" target="_blank" class="relative group overflow-hidden">my
+                    resume.<span
+                        class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <button id="menuToggle" class="pt-2 md:hidden focus:outline-none z-50">
+                <p id="hamburger">menu</p>
+                <p id="close" class="hidden h-8 w-8">close</p>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="overflow-y-auto fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 transform -translate-y-full transition-transform duration-500">
+            <a href="index.html" class="text-2xl menu-item relative group overflow-hidden">home.
+                <span
+                    class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                </span>
+            </a>
+            <a href="projects.html" class="text-2xl menu-item relative group overflow-hidden">projects.
+                <span
+                    class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                </span>
+            </a>
+            <a href="about.html" class="text-2xl menu-item relative group overflow-hidden">about me.
+                <span
+                    class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                </span>
+            </a>
+            <a href="contact.html" class="text-2xl menu-item relative group overflow-hidden">contact me.
+                <span
+                    class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                </span>
+            </a>
+            <a href="resume/Kamiye-Oladipo-Resume.pdf" target="_blank"
+                class="text-2xl menu-item relative group overflow-hidden">my resume.
+                <span
+                    class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full">
+                </span>
+            </a>
+        </div>
+    </nav>
+
+
+    <!--Start of main content-->
+    <main data-barba="container" data-barba-namespace="home">
+
+
+        <section class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+            <div class="pt-28 sm:pt-32 lg:pt-36">
+                <!-- Title -->
+                <h1 class="wow animate__animated animate__fadeInUp text-white text-2xl md:text-4xl font-bold"
+                    data-wow-duration="0.9s" data-wow-delay="0.05s">
+                    E-commerce Web Application (Manual Testing)
+                </h1>
+
+                <!-- Meta grid (aligned) -->
+                <div class="mt-12 sm:mt-14 lg:mt-16
+                     grid gap-y-12
+                     lg:grid-cols-3 lg:gap-x-28 xl:gap-x-36">
+                    <!-- Column template: label + same content wrapper -->
+                    <!-- Role-->
+                    <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
+                        data-wow-delay="0.18s">
+                        <p class="font-mono text-lg text-white/50 tracking-[0.12em] lowercase leading-none">
+                            Role :
+                        </p>
+
+                        <div class="mt-7">
+                            <!-- Match the list typography so baselines align -->
+                            <p class="font-mono text-md md:text-xl text-white">
+                                Manual QA Tester
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Length -->
+                    <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
+                        data-wow-delay="0.18s">
+                        <p class="font-mono text-lg text-white/50 tracking-[0.12em] lowercase leading-none">
+                            length :
+                        </p>
+
+                        <div class="mt-7">
+                            <!-- Match the list typography so baselines align -->
+                            <p class="font-mono text-md md:text-xl text-white">
+                                1 Week
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms-->
+                    <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
+                        data-wow-delay="0.18s">
+                        <p class="font-mono text-lg text-white/50 tracking-[0.12em] lowercase leading-none">
+                            Tools & Platforms:
+                        </p>
+
+                        <div class="mt-7">
+                            <!-- Match the list typography so baselines align -->
+                            <p class="font-mono text-md md:text-xl text-white">
+                                Qase.io
+                            </p>
+                            <p class="font-mono text-md md:text-xl text-white">
+                                Jira
+                            </p>
+                            <p class="font-mono text-md md:text-xl text-white">
+                                Chrome DevTools
+                            </p>
+                            <p class="font-mono text-md md:text-xl text-white">
+                                Desktop & Mobile Web
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Overview -->
+                <div class="mt-24 sm:mt-28 lg:mt-32">
+                    <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+                        data-wow-duration="0.9s" data-wow-delay="0.12s">
+                        overview.
+                    </h2>
+
+                    <!-- FULL WIDTH: removed max-w-* -->
+                    <p class="wow animate__animated animate__fadeInUp mt-8 w-full text-lg md:text-xl text-gray-300 leading-8
+                         tracking-[0.06em] text-white/55" data-wow-duration="0.9s" data-wow-delay="0.20s">
+                        This project demonstrates end-to-end manual testing of an e-commerce web application, including
+                        user
+                        registration,
+                        search & product discovery, product details, cart, and checkout flows. Test cases were executed
+                        across
+                        desktop
+                        and
+                        mobile web platforms, with defects logged in Jira and test management handled in Qase.
+
+                    </p>
+                </div>
+
+                <!-- Objective -->
+                <div class="mt-24 sm:mt-28 lg:mt-32">
+                    <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+                        data-wow-duration="0.9s" data-wow-delay="0.12s">
+                        objective.
+                    </h2>
+
+                    <!-- FULL WIDTH: removed max-w-* -->
+                    <p class="wow animate__animated animate__fadeInUp mt-8 w-full text-lg md:text-xl text-gray-300 leading-8
+                               tracking-[0.06em] text-white/55" data-wow-duration="0.9s" data-wow-delay="0.20s">
+                        To validate critical workflows, identify functional, validation, and UX defects, and demonstrate
+                        professional QA
+                        methodology.
+
+                    </p>
+                </div>
+
+                <!-- Full-bleed platform image -->
+                <section class="mt-16 sm:mt-20 lg:mt-24">
+                    <!-- Break out of the max-width container to span the viewport -->
+                    <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+                        <figure class="px-6 sm:px-8 lg:px-10">
+                            <img src="images/projects/jumia.png" alt="TRM platform screens" loading="lazy" class="wow animate__animated animate__fadeInUp w-full rounded-xl
+                   object-cover
+                   shadow-[0_0_0_1px_rgba(255,255,255,0.06)]" data-wow-duration="0.9s" data-wow-delay="0.10s" />
+
+                            <!-- Optional caption (remove if you don't want it) -->
+                            <figcaption
+                                class="mt-4 font-mono text-xs tracking-[0.14em] text-white/40 flex justify-center">
+                                Platform overview screen
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Section divider -->
+                <div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
+
+
+
+                <!-- Test Coverage -->
+                <div class="mt-16 sm:mt-20 lg:mt-24">
+                    <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+                        data-wow-duration="0.9s" data-wow-delay="0.12s">
+                        test coverage.
+                    </h2>
+
+                    <!-- 2-column layout (spans container width, respects paddings) -->
+                    <div class="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+                        <!-- Column 1: Execution summary -->
+                        <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
+                            data-wow-delay="0.18s">
+                            <p
+                                class="text-mono  text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                <span class="text-white">Total Test Cases Executed:</span> 37
+                            </p>
+
+                            <ul class="mt-8 space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        <span class="text-white">Passed:</span> 32
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        <span class="text-white">Failed:</span> 3
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        <span class="text-white">Blocked / Skipped:</span> 2
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Tested flows -->
+                        <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
+                            data-wow-delay="0.24s">
+                            <p class="font-mono text-lg text-white tracking-[0.12em] leading-none">
+
+                                Tested flows :
+                            </p>
+
+                            <ul class="mt-8 space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Authentication / User Registration
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Product Search &amp; Discovery
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Product Details Page (PDP)
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Shopping Cart
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Checkout
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                                    <p
+                                        class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                        Cross-Platform Testing: Desktop &amp; Mobile Web
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section divider -->
+                <div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
+
+
+                <!-- Key Defects & Observations -->
+                <div class="mt-16 sm:mt-20 lg:mt-24">
+                    <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+                        data-wow-duration="0.9s" data-wow-delay="0.12s">
+                        key defects &amp; observations.
+                    </h2>
+
+                    <!-- TABLE (desktop) + scroll on small screens -->
+                    <div class="wow animate__animated animate__fadeInUp mt-10" data-wow-duration="0.9s"
+                        data-wow-delay="0.18s">
+
+                        <div class="w-full overflow-x-auto">
+                            <table class="w-full min-w-[820px] border-separate border-spacing-y-4">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Defect /
+                                            Observation</th>
+                                        <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Type</th>
+                                        <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Severity</th>
+                                        <th class="text-left text-sm text-white/60 font-normal pb-2">Description</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- Row 1 -->
+                                    <tr class="align-top">
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-text-/55">
+                                                OTP not delivered during new user registration
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Functional
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Critical
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Prevents new users from creating accounts; no error message or fallback
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 2 -->
+                                    <tr class="align-top">
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Invalid email format accepted during registration
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Validation
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                High
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Allows incorrect user data; affects authentication &amp; communication
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 3 -->
+                                    <tr class="align-top">
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Search results return unrelated products
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Functional / UX
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Medium
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Reduces search accuracy and product discoverability
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 4 -->
+                                    <tr class="align-top">
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Checkout session remains active during inactivity
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Observation / UX
+                                            </p>
+                                        </td>
+                                        <td class="pr-8">
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Low
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p
+                                                class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
+                                                Potential risk for user confusion or session misuse
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <!-- Optional: placeholder area for Jira screenshots (full width, consistent spacing) -->
+                        <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            <!-- Replace these with your images -->
+                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+                                <img src="images/screenshots/Screenshot 1.png" alt="">
+                            </div>
+                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+                                <img src="images/screenshots/Screenshot 2.png" alt="">
+                            </div>
+                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
+                                <img src="images/screenshots/Screenshot 3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section divider -->
+                <div class="mt-16 sm:mt-20 lg:mt-24 h-px w-full bg-gray-300/20"></div>
+
+
+                <!-- Business Impact / Lessons Learned -->
+                <div class="mt-16 sm:mt-20 lg:mt-24">
+                    <h2 class="wow animate__animated animate__fadeInUp font-mono text-[22px] tracking-[0.10em] text-white lowercase"
+                        data-wow-duration="0.9s" data-wow-delay="0.12s">
+                        business impact / lessons learned.
+                    </h2>
+
+                    <ul class="wow animate__animated animate__fadeInUp mt-10 space-y-6" data-wow-duration="0.9s"
+                        data-wow-delay="0.18s">
+                        <li class="flex items-start gap-4">
+                            <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                            <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                Registration and input validation findings reinforced the importance of a reliable
+                                onboarding flow and
+                                clear user feedback.
+                            </p>
+                        </li>
+
+                        <li class="flex items-start gap-4">
+                            <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                            <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                Search relevance defects highlighted how inaccurate results reduce product
+                                discoverability and
+                                conversion potential.
+                            </p>
+                        </li>
+
+                        <li class="flex items-start gap-4">
+                            <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                            <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                Capturing the checkout session inactivity behavior demonstrated risk awareness beyond
+                                simple pass/fail
+                                outcomes.
+                            </p>
+                        </li>
+
+                        <li class="flex items-start gap-4">
+                            <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
+                            <p class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                Managing defects in Jira and test cases in Qase reflects a structured, industry-aligned
+                                QA workflow.
+                            </p>
+                        </li>
+                    </ul>
+
+
+                    <a href="https://drive.google.com/drive/folders/19oTJUYxtpLG5ploBTcqbC-H97U0esM2B" target="_blank"
+                        rel="noopener noreferrer" class="wow animate__animated animate__fadeInUp group mt-12 inline-flex items-center justify-center gap-3
+                 rounded-xl bg-[#FF4500] px-10 py-2
+                 text-lg md:text-xl font-semibold text-white tracking-[0.06em]
+                 shadow-[0_14px_34px_rgba(255,69,0,0.35)]
+                 transition-all duration-300 ease-out
+                 hover:-translate-y-1 hover:bg-[#ff5a1a] hover:shadow-[0_18px_44px_rgba(255,69,0,0.55)]
+                 active:translate-y-0
+                 focus:outline-none focus:ring-2 focus:ring-[#FF4500]/35" data-wow-duration="0.9s"
+                        data-wow-delay="0.12s">
+                        View Project Artifacts
+                        <span aria-hidden="true"
+                            class="transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                    </a>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <!-- placeholder for next sections -->
+                <div class="pb-24 sm:pb-28 lg:pb-36"></div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main> <!-- End of Main Content -->
+
+
+    <!--Footer-->
+    <footer class="bg-black text-white px-6 py-20 font-mono relative">
+        <!-- CTA Text -->
+        <div class="text-center mb-8 wow fadeInUp" data-wow-delay="0.1s">
+            <p class="text-gray-400 text-lg">Got an interesting project?</p>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="max-w-6xl mx-auto border-t border-gray-700 mb-12 wow fadeInUp" data-wow-delay="0.2s"></div>
+
+        <div class="max-w-6xl mx-auto grid gap-12 text-center md:grid-cols-3 md:text-left">
+            <!-- Connect with me -->
+            <div class="wow fadeInUp" data-wow-delay="0.3s">
+                <p class="text-sm text-gray-500 uppercase mb-2">connect with me</p>
+                <p class="text-sm text-gray-300 uppercase mb-2">i'd love to hear from you</p>
+            </div>
+
+            <!-- Follow me -->
+            <div class="wow fadeInUp" data-wow-delay="0.4s">
+                <p class="text-sm text-gray-500 uppercase mb-2">follow me</p>
+                <div class="flex justify-center md:justify-center space-x-4 text-xl">
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/kamiye-oladipo/" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/thekamiyeoladipo" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+
+
+                </div>
+            </div>
+
+            <!-- Say hello -->
+            <div class="wow fadeInUp" data-wow-delay="0.5s">
+                <p class="text-sm text-gray-500 uppercase mb-2">shoot me a mail</p>
+                <p class="text-gray-300 break-all text-base">kamiyeoladipo@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- GSAP Core -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="js/ScrambleTextPlugin.min.js"></script>
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <!-- jsdelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script>
+        barba.init({
+            // ...
+        })
+    </script>
+    <script>
+        // This event runs even on browser "back"
+        window.onpageshow = function () {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            const close = document.getElementById('close');
+
+            // Reset menu state on page load or back navigation
+            if (menu.classList.contains('menu-open')) {
+                menu.classList.remove('menu-open');
+                menu.classList.add('-translate-y-full');
+            }
+
+            // Reset icons
+            hamburger.classList.remove('hidden');
+            close.classList.add('hidden');
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
