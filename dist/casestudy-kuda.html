@@ -341,9 +341,13 @@
                         <!-- Column 1: Execution summary -->
                         <div class="wow animate__animated animate__fadeInUp" data-wow-duration="0.9s"
                             data-wow-delay="0.18s">
+                              <p
+                                class="text-mono  text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
+                                <span class="text-white">Total Test Cases Designes:</span> 21
+                            </p>
                             <p
                                 class="text-mono  text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                <span class="text-white">Total Test Cases Executed:</span> 37
+                                <span class="text-white">Total Test Cases Executed:</span> 17
                             </p>
 
                             <ul class="mt-8 space-y-6">
@@ -351,7 +355,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        <span class="text-white">Passed:</span> 32
+                                        <span class="text-white">Passed:</span> 17
                                     </p>
                                 </li>
 
@@ -359,7 +363,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        <span class="text-white">Failed:</span> 3
+                                        <span class="text-white">Failed:</span> 0
                                     </p>
                                 </li>
 
@@ -367,7 +371,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        <span class="text-white">Blocked / Skipped:</span> 2
+                                        <span class="text-white">Blocked / Skipped:</span> 0
                                     </p>
                                 </li>
                             </ul>
@@ -386,7 +390,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Authentication / User Registration
+                                        Authentication / Session management
                                     </p>
                                 </li>
 
@@ -394,7 +398,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Product Search &amp; Discovery
+                                        Dashboard &amp; Account Balance
                                     </p>
                                 </li>
 
@@ -402,7 +406,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Product Details Page (PDP)
+                                        Internal Transfers (Real Money)
                                     </p>
                                 </li>
 
@@ -410,7 +414,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Shopping Cart
+                                        External Transfers (Real Money)
                                     </p>
                                 </li>
 
@@ -418,7 +422,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Checkout
+                                        Transaction History
                                     </p>
                                 </li>
 
@@ -426,7 +430,7 @@
                                     <span class="mt-[12px] h-[2px] w-7 shrink-0 bg-white/20"></span>
                                     <p
                                         class="text-lg md:text-xl text-gray-300 leading-8 tracking-[0.06em] text-white/55">
-                                        Cross-Platform Testing: Desktop &amp; Mobile Web
+                                        Cross-Platform Testing: Desktop App &amp; Mobile App
                                     </p>
                                 </li>
                             </ul>
@@ -445,6 +449,13 @@
                         key defects &amp; observations.
                     </h2>
 
+                <p class="wow animate__animated animate__fadeInUp mt-8 w-full text-lg md:text-xl text-gray-300 leading-8
+                                                             tracking-[0.06em] text-white/55" data-wow-duration="0.9s"
+                    data-wow-delay="0.20s">
+                    Since no functional defects were identified during execution, the focus was placed on system behavior stability and
+                    risk validation.
+                </p>
+
                     <!-- TABLE (desktop) + scroll on small screens -->
                     <div class="wow animate__animated animate__fadeInUp mt-10" data-wow-duration="0.9s"
                         data-wow-delay="0.18s">
@@ -456,7 +467,7 @@
                                         <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Defect /
                                             Observation</th>
                                         <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Type</th>
-                                        <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Severity</th>
+                                        <th class="text-left text-sm text-white/60 font-normal pb-2 pr-8">Risk Level</th>
                                         <th class="text-left text-sm text-white/60 font-normal pb-2">Description</th>
                                     </tr>
                                 </thead>
@@ -467,25 +478,25 @@
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-text-/55">
-                                                OTP not delivered during new user registration
+                                                Balance updates reflected immediately after transfer
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Functional
+                                                Functional Validation
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Critical
+                                                High (Validated)
                                             </p>
                                         </td>
                                         <td>
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Prevents new users from creating accounts; no error message or fallback
+                                                Confirms financial accuracy and transaction integrity
                                             </p>
                                         </td>
                                     </tr>
@@ -495,25 +506,25 @@
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Invalid email format accepted during registration
+                                                Transaction references consistently generated
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Validation
+                                                Data Integrity
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                High
+                                                High (Validated)
                                             </p>
                                         </td>
                                         <td>
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Allows incorrect user data; affects authentication &amp; communication
+                                                Ensures traceability for dispute resolution
                                             </p>
                                         </td>
                                     </tr>
@@ -523,25 +534,25 @@
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Search results return unrelated products
+                                                Cross-platform balance synchronization maintained
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Functional / UX
+                                                Consistency
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Medium
+                                                Medium (Validated)
                                             </p>
                                         </td>
                                         <td>
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Reduces search accuracy and product discoverability
+                                                Prevents user confusion across devices
                                             </p>
                                         </td>
                                     </tr>
@@ -551,25 +562,25 @@
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Checkout session remains active during inactivity
+                                                Error messages were clear for invalid transfer attempts
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Observation / UX
+                                                UX / Validation
                                             </p>
                                         </td>
                                         <td class="pr-8">
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Low
+                                                Low (Positive Observation)
                                             </p>
                                         </td>
                                         <td>
                                             <p
                                                 class="text-lg md:text-xl text-white leading-8 tracking-[0.06em] text-white/55">
-                                                Potential risk for user confusion or session misuse
+                                               Improves user trust and system transparency
                                             </p>
                                         </td>
                                     </tr>
@@ -579,18 +590,7 @@
 
 
                         <!-- Optional: placeholder area for Jira screenshots (full width, consistent spacing) -->
-                        <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                            <!-- Replace these with your images -->
-                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
-                                <img src="images/screenshots/Screenshot 1.png" alt="">
-                            </div>
-                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
-                                <img src="images/screenshots/Screenshot 2.png" alt="">
-                            </div>
-                            <div class="h-auto rounded-lg bg-white/5 border border-white/10">
-                                <img src="images/screenshots/Screenshot 3.png" alt="">
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
 
